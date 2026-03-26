@@ -15,8 +15,7 @@ function [y,t] = generar_sinc(fs, fm, t_inicial, t_final)
 
   # Indices donde x NO es 0
   indices = find(x!=0);
-
-  y(indices) = sin(x(indices) ./ x(indices));
+  y(indices) = sin(x(indices)) ./ x(indices);
 endfunction
 
 function [y, t] = generar_cuadrada(fs, fm, phi, t_inicial, t_final)
